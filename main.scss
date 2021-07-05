@@ -1,6 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import './sass/variables';
+
+html, body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: $light-gray;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 85%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-areas: "description"
+                         "subscription"
+                         "about";
+
+    &__description, &__subscription, &__about {
+        padding: 1.5rem;
+    }
+
+    &__description {
+        grid-area: description;
+        background-color: $white;
+        border-radius: 0.3rem 0.3rem 0 0;
+    }
+
+    &__subscription {
+        grid-area: subscription;
+        background-color: $cyan;
+    }
+
+    &__about {
+        grid-area: about;
+        background-color: $light-cyan;
+        border-radius: 0 0 0.3rem 0.3rem;
+    }
+
+    &__title {
+        color: $cyan;
+        font-size: 1.3rem;
+        margin: 0 0 1.5rem;
+    }
+
+    &__subtitle {
+        color: $light-gray;
+        font-size: 1.2rem;
+        margin-top: 0;
+
+        &--main {
+            margin-top: 0.875rem;
+            color: $bright-yellow;
+            font-size: 1rem;
+        }
+    }
+
+    &__p {
+        color: $light-gray;
+        font-size: 1rem;
+
+        &--main {
+            color: $grayish-blue;
+            line-height: 2;
+            font-size: 0.875rem;
+        }
+
+        &--plan {
+            color: $transparent-light-gray;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__price {
+        color: $light-gray;
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    &__button {
+        display: block;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        width: 100%;
+        border: none;
+        border-radius: 0.3rem;
+        background-color: $bright-yellow;
+        box-shadow: 0px 2px 8px hsla(0, 0%, 0%, 0.3);
+        color: $white;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        color: $transparent-light-gray;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+
+        li:not(:last-child) {
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
     
     a { 
         color: hsl(228, 45%, 44%); 
